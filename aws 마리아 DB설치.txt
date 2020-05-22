@@ -1,9 +1,0 @@
-http://magic.wickedmiso.com/113
-
-sudo netstat -antp | grep mysql
-
-sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf
-
-sudo service mysql restart
-create user 'user'@'localhost' identified by '1234';
-grant all privileges on *.* to 'user'@'%' identified by '1234';

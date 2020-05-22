@@ -1,0 +1,24 @@
+http://magic.wickedmiso.com/113
+
+sudo netstat -antp | grep mysql
+
+sudo vim /etc/mysql/mariadb.conf.d/50-server.cnf
+
+sudo service mysql restart
+create user 'user'@'localhost' identified by '1234';
+grant all privileges on *.* to 'user'@'%' identified by '1234';
+
+
+와스설치 jdk 설치
+sudo add-apt-repository ppa:webupd8team/java 
+
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk
+
+java -version
+
+
+sudo apt-get install tomcat8
+
+ec2 인스턴스 인바운드 규칙 8080 열것
+https://jwj1699.tistory.com/m/16
