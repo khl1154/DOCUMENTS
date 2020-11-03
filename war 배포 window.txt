@@ -1,0 +1,31 @@
+해당 프로젝트 war export
+
+webapps 폴더내에 위치 시키기
+
+
+
+C:\Users\USER\Downloads\Eurox\Eurox\doppio-eurox (2)\doppio-eurox\apache-tomcat-7.0.76\conf\server.xml
+
+
+
+      <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true">
+
+        <!-- SingleSignOn valve, share authentication between web applications
+             Documentation at: /docs/config/valve.html -->
+        <!--
+        <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
+        -->
+
+        <!-- Access log processes all example.
+             Documentation at: /docs/config/valve.html
+             Note: The pattern used is equivalent to using pattern="common" -->
+
+
+	아래 추가<!--404 방지-->
+        <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
+               prefix="localhost_access_log." suffix=".txt"
+               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+		<Context docBase="프로젝트명" path="/url상의 주소" reloadable="false"/>
+
+      </Host>
